@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AniLet.js Showcase</title>
+  <meta name="description" content="AniLet.js – class-driven animated letters in vanilla JS. Demos and usage.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/vs2015.min.css">
+  <style>
+    :root{--bg:#0b0f17;--fg:#e6eefb;--muted:#9bb0cb;--card:#121826;--accent:#60a5fa}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1000px;margin:0 auto;padding:32px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
+    header h1{margin:0;font-size:28px}
+    header .version{color:var(--muted);font-size:14px}
+    .lead{color:var(--muted);margin:0 0 24px 0}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border:1px solid #1f2a3b;border-radius:12px;padding:18px}
+    .card h3{margin:0 0 12px 0;font-size:18px}
+    .demo{display:flex;align-items:center;justify-content:center;min-height:90px;border-radius:8px;background:#0e1421;border:1px dashed #263245;margin-bottom:10px}
+    .label{display:block;color:var(--muted);font-size:13px;margin:0 0 6px 0}
+    .note{font-size:13px;color:var(--muted)}
+    pre{margin:0}
+    .footer{margin-top:28px;color:var(--muted);font-size:13px}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AniLet.js</h1>
+      <span class="version">v1.1.0</span>
+    </header>
+    <p class="lead">Class-driven animated letters in vanilla JS. Add the class you want, and the text animates when it enters the viewport. Control timing via <code>data-delay</code> and <code>data-duration</code>.</p>
+
+    <div class="card" style="margin-bottom:18px">
+      <h3>Install / Use</h3>
+      <div class="grid">
+        <div>
+          <span class="label">Include script</span>
+          <pre><code class="language-html">&lt;script src="aniLet.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        <div>
+          <span class="label">Basic usage</span>
+          <pre><code class="language-html">&lt;div class="aniLet aniLet__fadeIn"&gt;Hello AniLet&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+      <p class="note" style="margin-top:10px">Place <code>aniLet.min.js</code> alongside this page (in <code>docs/</code> for GitHub Pages). Options: <code>data-delay</code> (ms between letters, default 50) and <code>data-duration</code> (total ms, default 1000).</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Fade In</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__fadeIn">Hello AniLet FadeIn</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__fadeIn"&gt;Hello AniLet FadeIn&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Slide Up</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__slideUp">Slide Up Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__slideUp"&gt;Slide Up Example&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Slide Down</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__slideDown">Slide Down Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__slideDown"&gt;Slide Down Example&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Zoom In</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__zoomIn" data-delay="80" data-duration="800">Zoom In Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__zoomIn" data-delay="80" data-duration="800"&gt;Zoom In Example&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Fade In Left</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__fadeInLeft">Fade In Left Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__fadeInLeft"&gt;Fade In Left Example&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Fade In Right</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__fadeInRight">Fade In Right Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__fadeInRight"&gt;Fade In Right Example&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Fade In Down</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__fadeInDown">Fade In Down Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__fadeInDown"&gt;Fade In Down Example&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Fade In Top Left</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__fadeInTopLeft">Fade In Top Left</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__fadeInTopLeft"&gt;Fade In Top Left&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Fade In Top Right</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__fadeInTopRight">Fade In Top Right</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__fadeInTopRight"&gt;Fade In Top Right&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Bounce In</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__bounceIn" data-duration="2000">Bounce In Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__bounceIn" data-duration="2000"&gt;Bounce In Example&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Fall Down</h3>
+        <div class="demo">
+          <div class="aniLet aniLet__fallDown" data-duration="2000">Fall Down Example</div>
+        </div>
+        <pre><code class="language-html">&lt;div class="aniLet aniLet__fallDown" data-duration="2000"&gt;Fall Down Example&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+
+    <p class="footer">Tip: Animations fire when elements enter the viewport. Scroll if you don’t see them immediately.</p>
+  </div>
+
+  <script src="aniLet.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

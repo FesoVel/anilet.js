@@ -1,0 +1,13 @@
+{
+  "name": "ani-let",
+  "version": "1.0.0",
+  "description": "Lightweight, class-driven animated letters library in vanilla JS",
+  "main": "dist/aniLet.min.js",
+  "scripts": {
+    "build": "terser src/aniLet.js -o dist/aniLet.min.js --compress --mangle",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["animation", "letters", "text", "scroll", "vanilla-js"],
+  "author": "Viktor Veljanovski",
+  "license": "MIT"
+}
