@@ -7,7 +7,17 @@
     "build": "terser src/aniLet.js -o dist/aniLet.min.js --compress --mangle",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["animation", "letters", "text", "scroll", "vanilla-js"],
+  "keywords": [
+    "animation",
+    "letters",
+    "text",
+    "scroll",
+    "vanilla-js"
+    "reveal"
+  ],
   "author": "Viktor Veljanovski",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "terser": "^5.44.0"
+  }
 }
